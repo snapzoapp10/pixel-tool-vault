@@ -52,7 +52,7 @@ function Refund() {
             method within 1-3 working days after approval.
           </p>
           <div className="mt-3 flex flex-wrap gap-3">
-            <Link to="/track" search={{}} className="rounded-lg border border-border px-4 py-2 text-sm font-semibold">
+            <Link to="/track" search={{ order: undefined, email: undefined }} className="rounded-lg border border-border px-4 py-2 text-sm font-semibold">
               Find my order
             </Link>
             <Link to="/contact" className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">
