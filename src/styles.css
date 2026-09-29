@@ -63,14 +63,14 @@
 }
 
 :root {
-  --radius: 1rem;
-  --background: oklch(0.14 0.03 150);
+  --radius: 0.75rem;
+  --background: oklch(0.105 0.035 148);
   --foreground: oklch(0.97 0.01 280);
-  --card: oklch(0.19 0.04 150 / 0.7);
+  --card: oklch(0.145 0.045 148 / 0.88);
   --card-foreground: oklch(0.97 0.01 280);
   --popover: oklch(0.18 0.04 150);
   --popover-foreground: oklch(0.97 0.01 280);
-  --primary: oklch(0.9 0.2 125);
+  --primary: oklch(0.91 0.22 125);
   --primary-foreground: oklch(0.18 0.05 150);
   --primary-glow: oklch(0.75 0.2 140);
   --secondary: oklch(0.23 0.04 150);
@@ -89,7 +89,7 @@
   --ink: oklch(0.11 0.03 150);
   --ink-foreground: oklch(0.97 0.01 280);
   --ink-muted: oklch(0.74 0.04 280);
-  --border: oklch(1 0 0 / 11%);
+  --border: oklch(0.82 0.19 132 / 24%);
   --input: oklch(1 0 0 / 14%);
   --ring: oklch(0.9 0.2 125);
   --chart-1: oklch(0.66 0.24 295);
@@ -178,6 +178,25 @@ body {
     radial-gradient(40% 40% at 90% 80%, oklch(0.75 0.2 135 / 0.1), transparent 70%);
   background-attachment: fixed;
 }
+.home-reference { overflow: clip; }
+.hero-band {
+  background:
+    linear-gradient(132deg, transparent 0 17%, oklch(0.68 0.19 132 / .09) 17% 19%, transparent 19% 72%, oklch(0.84 0.22 125 / .12) 72% 76%, transparent 76%),
+    radial-gradient(65% 90% at 86% 42%, oklch(0.7 0.2 132 / .2), transparent 68%);
+}
+.plans-band { background: radial-gradient(65% 90% at 3% 50%, oklch(0.72 0.19 130 / .1), transparent 55%); }
+.why-band { background: linear-gradient(132deg, transparent 0 63%, oklch(0.76 0.21 128 / .09) 63% 66%, transparent 66%); }
+.reference-pill { display: inline-flex; align-items: center; gap: .55rem; border: 1px solid var(--primary); border-radius: 999px; padding: .35rem .85rem; font-size: .75rem; font-weight: 700; }
+.reference-pill i { width: .22rem; height: .22rem; border-radius: 999px; background: var(--primary); }
+.feature-icon { display: flex; width: 3.5rem; height: 3.5rem; flex: none; align-items: center; justify-content: center; border: 1px solid var(--primary); border-radius: .75rem; color: var(--primary); box-shadow: inset 0 0 18px color-mix(in oklab, var(--primary) 8%, transparent); }
+.hero-art { filter: drop-shadow(0 24px 36px color-mix(in oklab, var(--primary) 19%, transparent)); }
+.hero-art img { transition: transform .12s linear; }
+.plan-card { position: relative; display: flex; min-height: 29rem; height: 100%; flex-direction: column; border: 1px solid color-mix(in oklab, var(--primary) 35%, transparent); border-radius: .75rem; background: color-mix(in oklab, var(--card) 90%, transparent); padding: 1.5rem; transition: transform .25s ease, border-color .25s ease; }
+.plan-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+.plan-card-popular { border: 2px solid var(--primary); box-shadow: 0 0 28px color-mix(in oklab, var(--primary) 30%, transparent); }
+.popular-label { position: absolute; left: 50%; top: 0; display: inline-flex; transform: translate(-50%, -55%); align-items: center; gap: .35rem; white-space: nowrap; border-radius: 999px; background: var(--primary); padding: .35rem .8rem; color: var(--primary-foreground); font-size: .72rem; font-weight: 800; }
+.lovable-mark { margin-inline: auto; display: flex; width: 4rem; height: 4rem; align-items: center; justify-content: center; border: 1px solid var(--primary); border-radius: .8rem; background: linear-gradient(145deg, oklch(0.2 0.06 150), oklch(0.11 0.035 150)); box-shadow: inset 0 0 16px color-mix(in oklab, var(--primary) 12%, transparent); }
+.lovable-mark span { font-size: 2.65rem; line-height: 1; background: linear-gradient(135deg, oklch(0.75 0.19 48), oklch(0.67 0.28 350) 52%, oklch(0.64 0.23 292)); background-clip: text; color: transparent; }
 .bg-card { backdrop-filter: blur(14px); }
 
 @utility glass {
