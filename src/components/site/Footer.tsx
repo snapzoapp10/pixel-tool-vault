@@ -1,20 +1,16 @@
 import { Link } from "@tanstack/react-router";
 import { Clock, Mail, MessageCircle } from "lucide-react";
 import type { SiteSettings } from "@/lib/public.functions";
+import logoAsset from "@/assets/pixelline-wordmark.png.asset.json";
 
 const paymentLabels = ["bKash", "Nagad", "Rocket", "Binance", "Bybit"];
 
 export function Footer({ settings }: { settings?: Partial<SiteSettings> }) {
   return (
-    <footer className="ink-panel mt-16">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="ink-panel">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-3">
-          <div className="flex items-center gap-2.5">
-            <span className="flex size-9 items-center justify-center rounded-lg bg-primary font-display text-base font-bold text-primary-foreground">
-              PL
-            </span>
-            <span className="font-display text-lg font-bold">Pixel Line</span>
-          </div>
+          <img src={logoAsset.url} alt="Pixelline" className="h-10 w-auto object-contain" />
           <p className="text-sm text-ink-muted">
             {settings?.tagline ?? "Genuine AI subscriptions, credits & tool licenses"} — trusted by creators,
             freelancers and agencies across Bangladesh.
@@ -106,9 +102,9 @@ export function Footer({ settings }: { settings?: Partial<SiteSettings> }) {
       </div>
 
       <div className="border-t border-white/10 px-4 py-5">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 text-xs text-ink-muted sm:flex-row">
-          <p>© {new Date().getFullYear()} Pixel Line. All rights reserved.</p>
-          <p>Digital goods — delivery after manual payment verification.</p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 text-xs text-ink-muted sm:flex-row">
+          <p>© {new Date().getFullYear()} Pixelline. All rights reserved.</p>
+          <div className="flex gap-5"><Link to="/terms" className="hover:text-primary">Terms & Conditions</Link><Link to="/refund" className="hover:text-primary">Privacy Policy</Link></div>
         </div>
       </div>
     </footer>

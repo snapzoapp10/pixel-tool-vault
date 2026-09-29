@@ -5,6 +5,7 @@ import { useCurrency } from "@/hooks/useCurrency";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { useQueryClient } from "@tanstack/react-query";
+import logoAsset from "@/assets/pixelline-wordmark.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -39,14 +40,10 @@ export function Header({ announcement }: { announcement?: string }) {
         </div>
       ) : null}
 
-      <div className="border-b border-border bg-background/60 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4">
-          <Link to="/" className="flex items-center gap-2.5">
-            <span className="flex size-9 items-center justify-center rounded-lg bg-gradient-brand glow font-display text-lg font-black text-primary-foreground">P</span>
-            <span className="leading-tight">
-              <span className="block font-display text-xl font-bold tracking-tight">Pixel<span className="text-primary">line</span></span>
-              <span className="block text-[11px] text-muted-foreground">AI subscriptions & licenses</span>
-            </span>
+      <div className="border-b border-border bg-background/90 backdrop-blur-xl">
+        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-3 px-5">
+          <Link to="/" className="flex items-center">
+            <img src={logoAsset.url} alt="Pixelline" className="h-11 w-auto object-contain" />
           </Link>
 
           <nav className="hidden items-center gap-1 md:flex">
@@ -56,7 +53,7 @@ export function Header({ announcement }: { announcement?: string }) {
                 to={l.to}
                 activeProps={{ className: "!text-primary border-b-2 border-primary rounded-none" }}
                 activeOptions={{ exact: l.to === "/" }}
-                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
               >
                 {l.label}
               </Link>
