@@ -124,7 +124,7 @@ export const getStorefront = createServerFn({ method: "GET" }).handler(async () 
 });
 
 export const listProducts = createServerFn({ method: "GET" })
-  .inputValidator((d: { category?: string; q?: string; sort?: string }) =>
+  .inputValidator((d: { category?: string | undefined; q?: string | undefined; sort?: string | undefined }) =>
     z
       .object({ category: z.string().optional(), q: z.string().optional(), sort: z.string().optional() })
       .parse(d ?? {}),

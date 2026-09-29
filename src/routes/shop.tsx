@@ -4,7 +4,7 @@ import { Search } from "lucide-react";
 import { listProducts } from "@/lib/public.functions";
 import { ProductCard } from "@/components/site/ProductCard";
 
-type ShopSearch = { category?: string; q?: string; sort?: string };
+type ShopSearch = { category?: string | undefined; q?: string | undefined; sort?: string | undefined };
 
 const shopQuery = (search: ShopSearch) =>
   queryOptions({
