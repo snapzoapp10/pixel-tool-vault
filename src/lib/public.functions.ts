@@ -426,10 +426,6 @@ export const createOrder = createServerFn({ method: "POST" })
     });
 
     if (appliedCoupon) {
-      await db.rpc("noop").then(
-        () => undefined,
-        () => undefined,
-      );
       const { data: c } = await db.from("coupons").select("used_count").eq("code", appliedCoupon).maybeSingle();
       await db
         .from("coupons")
