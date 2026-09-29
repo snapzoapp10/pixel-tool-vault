@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Eye, Search } from "lucide-react";
 import { toast } from "sonner";
 import { adminListOrders, adminProofUrl, adminUpdateOrder } from "@/lib/admin.functions";
@@ -116,8 +116,8 @@ function Orders() {
               {data.orders.map((o: any) => {
                 const d = draftFor(o);
                 return (
-                  <>
-                    <tr key={o.id}>
+                  <Fragment key={o.id}>
+                    <tr>
                       <Td className="font-semibold">
                         {o.order_number}
                         <span className="mt-0.5 block text-xs font-normal text-muted-foreground">
@@ -153,7 +153,7 @@ function Orders() {
                       </Td>
                     </tr>
                     {open === o.id ? (
-                      <tr key={`${o.id}-detail`}>
+                      <tr>
                         <Td className="pb-6" >
                           <div className="w-[min(88vw,900px)] space-y-4">
                             <div className="rounded-lg border border-border bg-muted/40 p-4">
@@ -237,7 +237,7 @@ function Orders() {
                         </Td>
                       </tr>
                     ) : null}
-                  </>
+                  </Fragment>
                 );
               })}
             </tbody>
