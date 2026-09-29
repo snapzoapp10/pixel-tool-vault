@@ -42,7 +42,7 @@ function Scene() {
         {[0, 1, 2].map((i) => (
           <mesh key={i} position={[2.25 + i * 0.05, 1.2 - i * 0.22, 0.4 - i * 0.02]} rotation={[0, -0.5, 0.05]}>
             <boxGeometry args={[1.1 - i * 0.25, 0.07, 0.02]} />
-            <meshStandardMaterial color={["#22d3ee", "#ec4899", "#a78bfa"][i]} emissive={["#22d3ee", "#ec4899", "#a78bfa"][i]} emissiveIntensity={1} />
+            <meshStandardMaterial color={["#22d3ee", "#ec4899", "#a78bfa"][i]!} emissive={["#22d3ee", "#ec4899", "#a78bfa"][i]!} emissiveIntensity={1} />
           </mesh>
         ))}
       </Float>
