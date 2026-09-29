@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Clock, Mail, MessageCircle } from "lucide-react";
 import type { SiteSettings } from "@/lib/public.functions";
-import logoAsset from "@/assets/pixelline-logo.png.asset.json";
+import logoAsset from "@/assets/pixelline-wordmark.png.asset.json";
 
 const paymentLabels = ["bKash", "Nagad", "Rocket", "Binance", "Bybit"];
 

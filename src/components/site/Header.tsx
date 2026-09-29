@@ -5,7 +5,7 @@ import { useCurrency } from "@/hooks/useCurrency";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { useQueryClient } from "@tanstack/react-query";
-import logoAsset from "@/assets/pixelline-logo.png.asset.json";
+import logoAsset from "@/assets/pixelline-wordmark.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -43,7 +43,7 @@ export function Header({ announcement }: { announcement?: string }) {
       <div className="border-b border-border bg-background/90 backdrop-blur-xl">
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-3 px-5">
           <Link to="/" className="flex items-center">
-            <img src={logoAsset.url} alt="Pixelline" className="h-10 w-auto object-contain" />
+            <img src={logoAsset.url} alt="Pixelline" className="h-11 w-auto object-contain" />
           </Link>
 
           <nav className="hidden items-center gap-1 md:flex">
