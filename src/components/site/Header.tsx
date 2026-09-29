@@ -37,10 +37,10 @@ export function Header({ announcement }: { announcement?: string }) {
         </div>
       ) : null}
 
-      <div className="border-b border-border bg-card/95 backdrop-blur">
+      <div className="border-b border-border bg-background/60 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4">
           <Link to="/" className="flex items-center gap-2.5">
-            <span className="flex size-9 items-center justify-center rounded-lg bg-primary font-display text-base font-bold text-primary-foreground">
+            <span className="flex size-9 items-center justify-center rounded-lg bg-gradient-brand glow font-display text-base font-bold text-primary-foreground">
               PL
             </span>
             <span className="leading-tight">
