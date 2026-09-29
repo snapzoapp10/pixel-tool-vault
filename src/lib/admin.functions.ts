@@ -512,7 +512,7 @@ export const adminListMisc = createServerFn({ method: "GET" })
       coupons: coupons.data ?? [],
       methods: methods.data ?? [],
       reviews: reviews.data ?? [],
-      settings: (settings.data?.value as Record<string, unknown>) ?? {},
+      settings: (settings.data?.value ?? {}) as Record<string, string | number | boolean | null>,
       posts: posts.data ?? [],
       activity: activity.data ?? [],
       products: products.data ?? [],

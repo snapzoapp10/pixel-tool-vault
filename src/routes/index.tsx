@@ -91,7 +91,7 @@ function Home() {
                   Browse all products <ArrowRight className="size-4" />
                 </Link>
                 <Link
-                  to="/track"
+                  to="/track" search={{}}
                   className="inline-flex items-center gap-2 rounded-lg border border-white/25 px-5 py-3 text-sm font-semibold transition-colors hover:bg-white/10"
                 >
                   Track an order

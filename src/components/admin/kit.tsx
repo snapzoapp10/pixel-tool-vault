@@ -97,7 +97,7 @@ export function TableWrap({ children }: { children: ReactNode }) {
   );
 }
 
-export function Th({ children }: { children: ReactNode }) {
+export function Th({ children }: { children?: ReactNode }) {
   return (
     <th className="whitespace-nowrap border-b border-border pb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
       {children}

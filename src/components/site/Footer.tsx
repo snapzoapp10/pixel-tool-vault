@@ -40,7 +40,7 @@ export function Footer({ settings }: { settings?: Partial<SiteSettings> }) {
               </Link>
             </li>
             <li>
-              <Link to="/track" className="hover:text-primary">
+              <Link to="/track" search={{}} className="hover:text-primary">
                 Track your order
               </Link>
             </li>
