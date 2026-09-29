@@ -56,7 +56,7 @@ function HeroVisual() {
       <div className="absolute inset-0 transition-transform duration-100" style={{ transform: `rotateY(${-14 + r * 0.03}deg) rotateX(${6 + r * 0.02}deg) translateY(${r * -0.15}px)`, transformStyle: "preserve-3d" }}>
         <div className="glass neon-border absolute left-0 top-8 h-3/4 w-3/5 rounded-2xl p-4" style={{ transform: "translateZ(-60px)" }}>
           <div className="mb-3 flex gap-1.5">{[0,1,2].map(i=><span key={i} className="size-2 rounded-full bg-primary/70" />)}</div>
-          {["w-3/4","w-1/2","w-2/3","w-2/5","w-3/5","w-1/3"].map((w,i)=><div key={i} className={`mb-2 h-2 rounded bg-primary/${i%2?"30":"50"} ${w}`} />)}
+          {["w-3/4","w-1/2","w-2/3","w-2/5","w-3/5","w-1/3"].map((w,i)=><div key={i} className={`mb-2 h-2 rounded ${i%2?"bg-primary/30":"bg-primary/50"} ${w}`} />)}
         </div>
         <div className="glass neon-border absolute right-0 top-0 h-2/3 w-3/5 rounded-2xl" style={{ transform: "translateZ(-30px)" }} />
         <div className="glass neon-border float-y absolute left-[18%] top-[22%] w-[68%] rounded-2xl p-6 glow" style={{ transform: "translateZ(40px)" }}>
